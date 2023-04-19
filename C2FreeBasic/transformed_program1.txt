@@ -1,0 +1,96 @@
+sub SetShapesTexture (Texture2D texture, Rectangle)
+end sub
+sub DrawPixel (int posX, int posY, Color)
+end sub
+sub DrawPixelV (Vector2 position, Color)
+end sub
+sub DrawLine (int startPosX, int startPosY, int endPosX, int endPosY, Color)
+end sub
+sub DrawLineV (Vector2 startPos, Vector2 endPos, Color)
+end sub
+sub DrawLineEx (Vector2 startPos, Vector2 endPos, float thick, Color)
+end sub
+sub DrawLineBezier (Vector2 startPos, Vector2 endPos, float thick, Color)
+end sub
+sub DrawLineBezierQuad (Vector2 startPos, Vector2 endPos, Vector2 controlPos, float thick, Color)
+end sub
+sub DrawLineBezierCubic (Vector2 startPos, Vector2 endPos, Vector2 startControlPos, Vector2 endControlPos, float thick, Color)
+end sub
+sub DrawLineStrip (Vector2 *points, int pointCount, Color)
+end sub
+sub DrawCircle (int centerX, int centerY, float radius, Color)
+end sub
+sub DrawCircleSector (Vector2 center, float radius, float startAngle, float endAngle, int segments, Color)
+end sub
+sub DrawCircleSectorLines (Vector2 center, float radius, float startAngle, float endAngle, int segments, Color)
+end sub
+sub DrawCircleGradient (int centerX, int centerY, float radius, Color color1, Color)
+end sub
+sub DrawCircleV (Vector2 center, float radius, Color)
+end sub
+sub DrawCircleLines (int centerX, int centerY, float radius, Color)
+end sub
+sub DrawEllipse (int centerX, int centerY, float radiusH, float radiusV, Color)
+end sub
+sub DrawEllipseLines (int centerX, int centerY, float radiusH, float radiusV, Color)
+end sub
+sub DrawRing (Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color)
+end sub
+sub DrawRingLines (Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color)
+end sub
+sub DrawRectangle (int posX, int posY, int width, int height, Color)
+end sub
+sub DrawRectangleV (Vector2 position, Vector2 size, Color)
+end sub
+sub DrawRectangleRec (Rectangle rec, Color)
+end sub
+sub DrawRectanglePro (Rectangle rec, Vector2 origin, float rotation, Color)
+end sub
+sub DrawRectangleGradientV (int posX, int posY, int width, int height, Color color1, Color)
+end sub
+sub DrawRectangleGradientH (int posX, int posY, int width, int height, Color color1, Color)
+end sub
+sub DrawRectangleGradientEx (Rectangle rec, Color col1, Color col2, Color col3, Color)
+end sub
+sub DrawRectangleLines (int posX, int posY, int width, int height, Color)
+end sub
+sub DrawRectangleLinesEx (Rectangle rec, float lineThick, Color)
+end sub
+sub DrawRectangleRounded (Rectangle rec, float roundness, int segments, Color)
+end sub
+sub DrawRectangleRoundedLines (Rectangle rec, float roundness, int segments, float lineThick, Color)
+end sub
+sub DrawTriangle (Vector2 v1, Vector2 v2, Vector2 v3, Color)
+end sub
+sub DrawTriangleLines (Vector2 v1, Vector2 v2, Vector2 v3, Color)
+end sub
+sub DrawTriangleFan (Vector2 *points, int pointCount, Color)
+end sub
+sub DrawTriangleStrip (Vector2 *points, int pointCount, Color)
+end sub
+sub DrawPoly (Vector2 center, int sides, float radius, float rotation, Color)
+end sub
+sub DrawPolyLines (Vector2 center, int sides, float radius, float rotation, Color)
+end sub
+sub DrawPolyLinesEx (Vector2 center, int sides, float radius, float rotation, float lineThick, Color)
+end sub
+function CheckCollisionRecs (Rectangle rec1, Rectangle)
+end function
+function CheckCollisionCircles (Vector2 center1, float radius1, Vector2 center2, float)
+end function
+function CheckCollisionCircleRec (Vector2 center, float radius, Rectangle)
+end function
+function CheckCollisionPointRec (Vector2 point, Rectangle)
+end function
+function CheckCollisionPointCircle (Vector2 point, Vector2 center, float)
+end function
+function CheckCollisionPointTriangle (Vector2 point, Vector2 p1, Vector2 p2, Vector2)
+end function
+function CheckCollisionPointPoly (Vector2 point, Vector2 *points, int)
+end function
+function CheckCollisionLines (Vector2 startPos1, Vector2 endPos1, Vector2 startPos2, Vector2 endPos2, Vector2)
+end function
+function CheckCollisionPointLine (Vector2 point, Vector2 p1, Vector2 p2, int)
+end function
+function GetCollisionRec (Rectangle rec1, Rectangle)
+end function

@@ -1,0 +1,1034 @@
+sub InitWindow (int width , int height , const char *title )
+end sub
+function WindowShouldClose (void )
+end function
+sub CloseWindow (void )
+end sub
+function IsWindowReady (void )
+end function
+function IsWindowFullscreen (void )
+end function
+function IsWindowHidden (void )
+end function
+function IsWindowMinimized (void )
+end function
+function IsWindowMaximized (void )
+end function
+function IsWindowFocused (void )
+end function
+function IsWindowResized (void )
+end function
+function IsWindowState (unsigned int flag )
+end function
+sub SetWindowState (unsigned int flags )
+end sub
+sub ClearWindowState (unsigned int flags )
+end sub
+sub ToggleFullscreen (void )
+end sub
+sub MaximizeWindow (void )
+end sub
+sub MinimizeWindow (void )
+end sub
+sub RestoreWindow (void )
+end sub
+sub SetWindowIcon (Image image )
+end sub
+sub SetWindowIcons (Image *images , int count )
+end sub
+sub SetWindowTitle (const char *title )
+end sub
+sub SetWindowPosition (int x , int y )
+end sub
+sub SetWindowMonitor (int monitor )
+end sub
+sub SetWindowMinSize (int width , int height )
+end sub
+sub SetWindowSize (int width , int height )
+end sub
+sub SetWindowOpacity (float opacity )
+end sub
+sub *GetWindowHandle (void )
+end sub
+function GetScreenWidth (void )
+end function
+function GetScreenHeight (void )
+end function
+function GetRenderWidth (void )
+end function
+function GetRenderHeight (void )
+end function
+function GetMonitorCount (void )
+end function
+function GetCurrentMonitor (void )
+end function
+function GetMonitorPosition (int monitor )
+end function
+function GetMonitorWidth (int monitor )
+end function
+function GetMonitorHeight (int monitor )
+end function
+function GetMonitorPhysicalWidth (int monitor )
+end function
+function GetMonitorPhysicalHeight (int monitor )
+end function
+function GetMonitorRefreshRate (int monitor )
+end function
+function GetWindowPosition (void )
+end function
+function GetWindowScaleDPI (void )
+end function
+function *GetMonitorName (int monitor )
+end function
+sub SetClipboardText (const char *text )
+end sub
+function *GetClipboardText (void )
+end function
+sub EnableEventWaiting (void )
+end sub
+sub DisableEventWaiting (void )
+end sub
+sub SwapScreenBuffer (void )
+end sub
+sub PollInputEvents (void )
+end sub
+sub WaitTime (double seconds )
+end sub
+sub ShowCursor (void )
+end sub
+sub HideCursor (void )
+end sub
+function IsCursorHidden (void )
+end function
+sub EnableCursor (void )
+end sub
+sub DisableCursor (void )
+end sub
+function IsCursorOnScreen (void )
+end function
+sub ClearBackground (Color color )
+end sub
+sub BeginDrawing (void )
+end sub
+sub EndDrawing (void )
+end sub
+sub BeginMode2D (Camera2D camera )
+end sub
+sub EndMode2D (void )
+end sub
+sub BeginMode3D (Camera3D camera )
+end sub
+sub EndMode3D (void )
+end sub
+sub BeginTextureMode (RenderTexture2D target )
+end sub
+sub EndTextureMode (void )
+end sub
+sub BeginShaderMode (Shader shader )
+end sub
+sub EndShaderMode (void )
+end sub
+sub BeginBlendMode (int mode )
+end sub
+sub EndBlendMode (void )
+end sub
+sub BeginScissorMode (int x , int y , int width , int height )
+end sub
+sub EndScissorMode (void )
+end sub
+sub BeginVrStereoMode (VrStereoConfig config )
+end sub
+sub EndVrStereoMode (void )
+end sub
+function LoadVrStereoConfig (VrDeviceInfo device )
+end function
+sub UnloadVrStereoConfig (VrStereoConfig config )
+end sub
+function LoadShader (const char *vsFileName , const char *fsFileName )
+end function
+function LoadShaderFromMemory (const char *vsCode , const char *fsCode )
+end function
+function IsShaderReady (Shader shader )
+end function
+function GetShaderLocation (Shader shader , const char *uniformName )
+end function
+function GetShaderLocationAttrib (Shader shader , const char *attribName )
+end function
+sub SetShaderValue (Shader shader , int locIndex , const void *value , int uniformType )
+end sub
+sub SetShaderValueV (Shader shader , int locIndex , const void *value , int uniformType , int count )
+end sub
+sub SetShaderValueMatrix (Shader shader , int locIndex , Matrix mat )
+end sub
+sub SetShaderValueTexture (Shader shader , int locIndex , Texture2D texture )
+end sub
+sub UnloadShader (Shader shader )
+end sub
+function GetMouseRay (Vector2 mousePosition , Camera camera )
+end function
+function GetCameraMatrix (Camera camera )
+end function
+function GetCameraMatrix2D (Camera2D camera )
+end function
+function GetWorldToScreen (Vector3 position , Camera camera )
+end function
+function GetScreenToWorld2D (Vector2 position , Camera2D camera )
+end function
+function GetWorldToScreenEx (Vector3 position , Camera camera , int width , int height )
+end function
+function GetWorldToScreen2D (Vector2 position , Camera2D camera )
+end function
+sub SetTargetFPS (int fps )
+end sub
+function GetFPS (void )
+end function
+function GetFrameTime (void )
+end function
+function GetTime (void )
+end function
+function GetRandomValue (int min , int max )
+end function
+sub SetRandomSeed (unsigned int seed )
+end sub
+sub TakeScreenshot (const char *fileName )
+end sub
+sub SetConfigFlags (unsigned int flags )
+end sub
+sub TraceLog (int logLevel , const char *text )
+end sub
+sub SetTraceLogLevel (int logLevel )
+end sub
+sub *MemAlloc (unsigned int size )
+end sub
+sub *MemRealloc (void *ptr , unsigned int size )
+end sub
+sub MemFree (void *ptr )
+end sub
+sub OpenURL (const char *url )
+end sub
+sub SetTraceLogCallback (TraceLogCallback callback )
+end sub
+sub SetLoadFileDataCallback (LoadFileDataCallback callback )
+end sub
+sub SetSaveFileDataCallback (SaveFileDataCallback callback )
+end sub
+sub SetLoadFileTextCallback (LoadFileTextCallback callback )
+end sub
+sub SetSaveFileTextCallback (SaveFileTextCallback callback )
+end sub
+function *LoadFileData (const char *fileName , unsigned int *bytesRead )
+end function
+sub UnloadFileData (unsigned char *data )
+end sub
+function SaveFileData (const char *fileName , void *data , unsigned int bytesToWrite )
+end function
+function ExportDataAsCode (const unsigned char *data , unsigned int size , const char *fileName )
+end function
+function *LoadFileText (const char *fileName )
+end function
+sub UnloadFileText (char *text )
+end sub
+function SaveFileText (const char *fileName , char *text )
+end function
+function FileExists (const char *fileName )
+end function
+function DirectoryExists (const char *dirPath )
+end function
+function IsFileExtension (const char *fileName , const char *ext )
+end function
+function GetFileLength (const char *fileName )
+end function
+function *GetFileExtension (const char *fileName )
+end function
+function *GetFileName (const char *filePath )
+end function
+function *GetFileNameWithoutExt (const char *filePath )
+end function
+function *GetDirectoryPath (const char *filePath )
+end function
+function *GetPrevDirectoryPath (const char *dirPath )
+end function
+function *GetWorkingDirectory (void )
+end function
+function *GetApplicationDirectory (void )
+end function
+function ChangeDirectory (const char *dir )
+end function
+function IsPathFile (const char *path )
+end function
+function LoadDirectoryFiles (const char *dirPath )
+end function
+function LoadDirectoryFilesEx (const char *basePath , const char *filter , bool scanSubdirs )
+end function
+sub UnloadDirectoryFiles (FilePathList files )
+end sub
+function IsFileDropped (void )
+end function
+function LoadDroppedFiles (void )
+end function
+sub UnloadDroppedFiles (FilePathList files )
+end sub
+function GetFileModTime (const char *fileName )
+end function
+function *CompressData (const unsigned char *data , int dataSize , int *compDataSize )
+end function
+function *DecompressData (const unsigned char *compData , int compDataSize , int *dataSize )
+end function
+function *EncodeDataBase64 (const unsigned char *data , int dataSize , int *outputSize )
+end function
+function *DecodeDataBase64 (const unsigned char *data , int *outputSize )
+end function
+function IsKeyPressed (int key )
+end function
+function IsKeyDown (int key )
+end function
+function IsKeyReleased (int key )
+end function
+function IsKeyUp (int key )
+end function
+sub SetExitKey (int key )
+end sub
+function GetKeyPressed (void )
+end function
+function GetCharPressed (void )
+end function
+function IsGamepadAvailable (int gamepad )
+end function
+function *GetGamepadName (int gamepad )
+end function
+function IsGamepadButtonPressed (int gamepad , int button )
+end function
+function IsGamepadButtonDown (int gamepad , int button )
+end function
+function IsGamepadButtonReleased (int gamepad , int button )
+end function
+function IsGamepadButtonUp (int gamepad , int button )
+end function
+function GetGamepadButtonPressed (void )
+end function
+function GetGamepadAxisCount (int gamepad )
+end function
+function GetGamepadAxisMovement (int gamepad , int axis )
+end function
+function SetGamepadMappings (const char *mappings )
+end function
+function IsMouseButtonPressed (int button )
+end function
+function IsMouseButtonDown (int button )
+end function
+function IsMouseButtonReleased (int button )
+end function
+function IsMouseButtonUp (int button )
+end function
+function GetMouseX (void )
+end function
+function GetMouseY (void )
+end function
+function GetMousePosition (void )
+end function
+function GetMouseDelta (void )
+end function
+sub SetMousePosition (int x , int y )
+end sub
+sub SetMouseOffset (int offsetX , int offsetY )
+end sub
+sub SetMouseScale (float scaleX , float scaleY )
+end sub
+function GetMouseWheelMove (void )
+end function
+function GetMouseWheelMoveV (void )
+end function
+sub SetMouseCursor (int cursor )
+end sub
+function GetTouchX (void )
+end function
+function GetTouchY (void )
+end function
+function GetTouchPosition (int index )
+end function
+function GetTouchPointId (int index )
+end function
+function GetTouchPointCount (void )
+end function
+sub SetGesturesEnabled (unsigned int flags )
+end sub
+function IsGestureDetected (int gesture )
+end function
+function GetGestureDetected (void )
+end function
+function GetGestureHoldDuration (void )
+end function
+function GetGestureDragVector (void )
+end function
+function GetGestureDragAngle (void )
+end function
+function GetGesturePinchVector (void )
+end function
+function GetGesturePinchAngle (void )
+end function
+sub UpdateCamera (Camera *camera , int mode )
+end sub
+sub UpdateCameraPro (Camera *camera , Vector3 movement , Vector3 rotation , float zoom )
+end sub
+sub SetShapesTexture (Texture2D texture , Rectangle source )
+end sub
+sub DrawPixel (int posX , int posY , Color color )
+end sub
+sub DrawPixelV (Vector2 position , Color color )
+end sub
+sub DrawLine (int startPosX , int startPosY , int endPosX , int endPosY , Color color )
+end sub
+sub DrawLineV (Vector2 startPos , Vector2 endPos , Color color )
+end sub
+sub DrawLineEx (Vector2 startPos , Vector2 endPos , float thick , Color color )
+end sub
+sub DrawLineBezier (Vector2 startPos , Vector2 endPos , float thick , Color color )
+end sub
+sub DrawLineBezierQuad (Vector2 startPos , Vector2 endPos , Vector2 controlPos , float thick , Color color )
+end sub
+sub DrawLineBezierCubic (Vector2 startPos , Vector2 endPos , Vector2 startControlPos , Vector2 endControlPos , float thick , Color color )
+end sub
+sub DrawLineStrip (Vector2 *points , int pointCount , Color color )
+end sub
+sub DrawCircle (int centerX , int centerY , float radius , Color color )
+end sub
+sub DrawCircleSector (Vector2 center , float radius , float startAngle , float endAngle , int segments , Color color )
+end sub
+sub DrawCircleSectorLines (Vector2 center , float radius , float startAngle , float endAngle , int segments , Color color )
+end sub
+sub DrawCircleGradient (int centerX , int centerY , float radius , Color color1 , Color color2 )
+end sub
+sub DrawCircleV (Vector2 center , float radius , Color color )
+end sub
+sub DrawCircleLines (int centerX , int centerY , float radius , Color color )
+end sub
+sub DrawEllipse (int centerX , int centerY , float radiusH , float radiusV , Color color )
+end sub
+sub DrawEllipseLines (int centerX , int centerY , float radiusH , float radiusV , Color color )
+end sub
+sub DrawRing (Vector2 center , float innerRadius , float outerRadius , float startAngle , float endAngle , int segments , Color color )
+end sub
+sub DrawRingLines (Vector2 center , float innerRadius , float outerRadius , float startAngle , float endAngle , int segments , Color color )
+end sub
+sub DrawRectangle (int posX , int posY , int width , int height , Color color )
+end sub
+sub DrawRectangleV (Vector2 position , Vector2 size , Color color )
+end sub
+sub DrawRectangleRec (Rectangle rec , Color color )
+end sub
+sub DrawRectanglePro (Rectangle rec , Vector2 origin , float rotation , Color color )
+end sub
+sub DrawRectangleGradientV (int posX , int posY , int width , int height , Color color1 , Color color2 )
+end sub
+sub DrawRectangleGradientH (int posX , int posY , int width , int height , Color color1 , Color color2 )
+end sub
+sub DrawRectangleGradientEx (Rectangle rec , Color col1 , Color col2 , Color col3 , Color col4 )
+end sub
+sub DrawRectangleLines (int posX , int posY , int width , int height , Color color )
+end sub
+sub DrawRectangleLinesEx (Rectangle rec , float lineThick , Color color )
+end sub
+sub DrawRectangleRounded (Rectangle rec , float roundness , int segments , Color color )
+end sub
+sub DrawRectangleRoundedLines (Rectangle rec , float roundness , int segments , float lineThick , Color color )
+end sub
+sub DrawTriangle (Vector2 v1 , Vector2 v2 , Vector2 v3 , Color color )
+end sub
+sub DrawTriangleLines (Vector2 v1 , Vector2 v2 , Vector2 v3 , Color color )
+end sub
+sub DrawTriangleFan (Vector2 *points , int pointCount , Color color )
+end sub
+sub DrawTriangleStrip (Vector2 *points , int pointCount , Color color )
+end sub
+sub DrawPoly (Vector2 center , int sides , float radius , float rotation , Color color )
+end sub
+sub DrawPolyLines (Vector2 center , int sides , float radius , float rotation , Color color )
+end sub
+sub DrawPolyLinesEx (Vector2 center , int sides , float radius , float rotation , float lineThick , Color color )
+end sub
+function CheckCollisionRecs (Rectangle rec1 , Rectangle rec2 )
+end function
+function CheckCollisionCircles (Vector2 center1 , float radius1 , Vector2 center2 , float radius2 )
+end function
+function CheckCollisionCircleRec (Vector2 center , float radius , Rectangle rec )
+end function
+function CheckCollisionPointRec (Vector2 point , Rectangle rec )
+end function
+function CheckCollisionPointCircle (Vector2 point , Vector2 center , float radius )
+end function
+function CheckCollisionPointTriangle (Vector2 point , Vector2 p1 , Vector2 p2 , Vector2 p3 )
+end function
+function CheckCollisionPointPoly (Vector2 point , Vector2 *points , int pointCount )
+end function
+function CheckCollisionLines (Vector2 startPos1 , Vector2 endPos1 , Vector2 startPos2 , Vector2 endPos2 , Vector2 *collisionPoint )
+end function
+function CheckCollisionPointLine (Vector2 point , Vector2 p1 , Vector2 p2 , int threshold )
+end function
+function GetCollisionRec (Rectangle rec1 , Rectangle rec2 )
+end function
+function LoadImage (const char *fileName )
+end function
+function LoadImageRaw (const char *fileName , int width , int height , int format , int headerSize )
+end function
+function LoadImageAnim (const char *fileName , int *frames )
+end function
+function LoadImageFromMemory (const char *fileType , const unsigned char *fileData , int dataSize )
+end function
+function LoadImageFromTexture (Texture2D texture )
+end function
+function LoadImageFromScreen (void )
+end function
+function IsImageReady (Image image )
+end function
+sub UnloadImage (Image image )
+end sub
+function ExportImage (Image image , const char *fileName )
+end function
+function ExportImageAsCode (Image image , const char *fileName )
+end function
+function GenImageColor (int width , int height , Color color )
+end function
+function GenImageGradientV (int width , int height , Color top , Color bottom )
+end function
+function GenImageGradientH (int width , int height , Color left , Color right )
+end function
+function GenImageGradientRadial (int width , int height , float density , Color inner , Color outer )
+end function
+function GenImageChecked (int width , int height , int checksX , int checksY , Color col1 , Color col2 )
+end function
+function GenImageWhiteNoise (int width , int height , float factor )
+end function
+function GenImagePerlinNoise (int width , int height , int offsetX , int offsetY , float scale )
+end function
+function GenImageCellular (int width , int height , int tileSize )
+end function
+function GenImageText (int width , int height , const char *text )
+end function
+function ImageCopy (Image image )
+end function
+function ImageFromImage (Image image , Rectangle rec )
+end function
+function ImageText (const char *text , int fontSize , Color color )
+end function
+function ImageTextEx (Font font , const char *text , float fontSize , float spacing , Color tint )
+end function
+sub ImageFormat (Image *image , int newFormat )
+end sub
+sub ImageToPOT (Image *image , Color fill )
+end sub
+sub ImageCrop (Image *image , Rectangle crop )
+end sub
+sub ImageAlphaCrop (Image *image , float threshold )
+end sub
+sub ImageAlphaClear (Image *image , Color color , float threshold )
+end sub
+sub ImageAlphaMask (Image *image , Image alphaMask )
+end sub
+sub ImageAlphaPremultiply (Image *image )
+end sub
+sub ImageBlurGaussian (Image *image , int blurSize )
+end sub
+sub ImageResize (Image *image , int newWidth , int newHeight )
+end sub
+sub ImageResizeNN (Image *image , int newWidth , int newHeight )
+end sub
+sub ImageResizeCanvas (Image *image , int newWidth , int newHeight , int offsetX , int offsetY , Color fill )
+end sub
+sub ImageMipmaps (Image *image )
+end sub
+sub ImageDither (Image *image , int rBpp , int gBpp , int bBpp , int aBpp )
+end sub
+sub ImageFlipVertical (Image *image )
+end sub
+sub ImageFlipHorizontal (Image *image )
+end sub
+sub ImageRotateCW (Image *image )
+end sub
+sub ImageRotateCCW (Image *image )
+end sub
+sub ImageColorTint (Image *image , Color color )
+end sub
+sub ImageColorInvert (Image *image )
+end sub
+sub ImageColorGrayscale (Image *image )
+end sub
+sub ImageColorContrast (Image *image , float contrast )
+end sub
+sub ImageColorBrightness (Image *image , int brightness )
+end sub
+sub ImageColorReplace (Image *image , Color color , Color replace )
+end sub
+function *LoadImageColors (Image image )
+end function
+function *LoadImagePalette (Image image , int maxPaletteSize , int *colorCount )
+end function
+sub UnloadImageColors (Color *colors )
+end sub
+sub UnloadImagePalette (Color *colors )
+end sub
+function GetImageAlphaBorder (Image image , float threshold )
+end function
+function GetImageColor (Image image , int x , int y )
+end function
+sub ImageClearBackground (Image *dst , Color color )
+end sub
+sub ImageDrawPixel (Image *dst , int posX , int posY , Color color )
+end sub
+sub ImageDrawPixelV (Image *dst , Vector2 position , Color color )
+end sub
+sub ImageDrawLine (Image *dst , int startPosX , int startPosY , int endPosX , int endPosY , Color color )
+end sub
+sub ImageDrawLineV (Image *dst , Vector2 start , Vector2 end , Color color )
+end sub
+sub ImageDrawCircle (Image *dst , int centerX , int centerY , int radius , Color color )
+end sub
+sub ImageDrawCircleV (Image *dst , Vector2 center , int radius , Color color )
+end sub
+sub ImageDrawCircleLines (Image *dst , int centerX , int centerY , int radius , Color color )
+end sub
+sub ImageDrawCircleLinesV (Image *dst , Vector2 center , int radius , Color color )
+end sub
+sub ImageDrawRectangle (Image *dst , int posX , int posY , int width , int height , Color color )
+end sub
+sub ImageDrawRectangleV (Image *dst , Vector2 position , Vector2 size , Color color )
+end sub
+sub ImageDrawRectangleRec (Image *dst , Rectangle rec , Color color )
+end sub
+sub ImageDrawRectangleLines (Image *dst , Rectangle rec , int thick , Color color )
+end sub
+sub ImageDraw (Image *dst , Image src , Rectangle srcRec , Rectangle dstRec , Color tint )
+end sub
+sub ImageDrawText (Image *dst , const char *text , int posX , int posY , int fontSize , Color color )
+end sub
+sub ImageDrawTextEx (Image *dst , Font font , const char *text , Vector2 position , float fontSize , float spacing , Color tint )
+end sub
+function LoadTexture (const char *fileName )
+end function
+function LoadTextureFromImage (Image image )
+end function
+function LoadTextureCubemap (Image image , int layout )
+end function
+function LoadRenderTexture (int width , int height )
+end function
+function IsTextureReady (Texture2D texture )
+end function
+sub UnloadTexture (Texture2D texture )
+end sub
+function IsRenderTextureReady (RenderTexture2D target )
+end function
+sub UnloadRenderTexture (RenderTexture2D target )
+end sub
+sub UpdateTexture (Texture2D texture , const void *pixels )
+end sub
+sub UpdateTextureRec (Texture2D texture , Rectangle rec , const void *pixels )
+end sub
+sub GenTextureMipmaps (Texture2D *texture )
+end sub
+sub SetTextureFilter (Texture2D texture , int filter )
+end sub
+sub SetTextureWrap (Texture2D texture , int wrap )
+end sub
+sub DrawTexture (Texture2D texture , int posX , int posY , Color tint )
+end sub
+sub DrawTextureV (Texture2D texture , Vector2 position , Color tint )
+end sub
+sub DrawTextureEx (Texture2D texture , Vector2 position , float rotation , float scale , Color tint )
+end sub
+sub DrawTextureRec (Texture2D texture , Rectangle source , Vector2 position , Color tint )
+end sub
+sub DrawTexturePro (Texture2D texture , Rectangle source , Rectangle dest , Vector2 origin , float rotation , Color tint )
+end sub
+sub DrawTextureNPatch (Texture2D texture , NPatchInfo nPatchInfo , Rectangle dest , Vector2 origin , float rotation , Color tint )
+end sub
+function Fade (Color color , float alpha )
+end function
+function ColorToInt (Color color )
+end function
+function ColorNormalize (Color color )
+end function
+function ColorFromNormalized (Vector4 normalized )
+end function
+function ColorToHSV (Color color )
+end function
+function ColorFromHSV (float hue , float saturation , float value )
+end function
+function ColorTint (Color color , Color tint )
+end function
+function ColorBrightness (Color color , float factor )
+end function
+function ColorContrast (Color color , float contrast )
+end function
+function ColorAlpha (Color color , float alpha )
+end function
+function ColorAlphaBlend (Color dst , Color src , Color tint )
+end function
+function GetColor (unsigned int hexValue )
+end function
+function GetPixelColor (void *srcPtr , int format )
+end function
+sub SetPixelColor (void *dstPtr , Color color , int format )
+end sub
+function GetPixelDataSize (int width , int height , int format )
+end function
+function GetFontDefault (void )
+end function
+function LoadFont (const char *fileName )
+end function
+function LoadFontEx (const char *fileName , int fontSize , int *fontChars , int glyphCount )
+end function
+function LoadFontFromImage (Image image , Color key , int firstChar )
+end function
+function LoadFontFromMemory (const char *fileType , const unsigned char *fileData , int dataSize , int fontSize , int *fontChars , int glyphCount )
+end function
+function IsFontReady (Font font )
+end function
+function *LoadFontData (const unsigned char *fileData , int dataSize , int fontSize , int *fontChars , int glyphCount , int type )
+end function
+function GenImageFontAtlas (const GlyphInfo *chars , Rectangle **recs , int glyphCount , int fontSize , int padding , int packMethod )
+end function
+sub UnloadFontData (GlyphInfo *chars , int glyphCount )
+end sub
+sub UnloadFont (Font font )
+end sub
+function ExportFontAsCode (Font font , const char *fileName )
+end function
+sub DrawFPS (int posX , int posY )
+end sub
+sub DrawText (const char *text , int posX , int posY , int fontSize , Color color )
+end sub
+sub DrawTextEx (Font font , const char *text , Vector2 position , float fontSize , float spacing , Color tint )
+end sub
+sub DrawTextPro (Font font , const char *text , Vector2 position , Vector2 origin , float rotation , float fontSize , float spacing , Color tint )
+end sub
+sub DrawTextCodepoint (Font font , int codepoint , Vector2 position , float fontSize , Color tint )
+end sub
+sub DrawTextCodepoints (Font font , const int *codepoints , int count , Vector2 position , float fontSize , float spacing , Color tint )
+end sub
+function MeasureText (const char *text , int fontSize )
+end function
+function MeasureTextEx (Font font , const char *text , float fontSize , float spacing )
+end function
+function GetGlyphIndex (Font font , int codepoint )
+end function
+function GetGlyphInfo (Font font , int codepoint )
+end function
+function GetGlyphAtlasRec (Font font , int codepoint )
+end function
+function *LoadUTF8 (const int *codepoints , int length )
+end function
+sub UnloadUTF8 (char *text )
+end sub
+function *LoadCodepoints (const char *text , int *count )
+end function
+sub UnloadCodepoints (int *codepoints )
+end sub
+function GetCodepointCount (const char *text )
+end function
+function GetCodepoint (const char *text , int *codepointSize )
+end function
+function GetCodepointNext (const char *text , int *codepointSize )
+end function
+function GetCodepointPrevious (const char *text , int *codepointSize )
+end function
+function *CodepointToUTF8 (int codepoint , int *utf8Size )
+end function
+function TextCopy (char *dst , const char *src )
+end function
+function TextIsEqual (const char *text1 , const char *text2 )
+end function
+function TextLength (const char *text )
+end function
+function *TextFormat (const char *text )
+end function
+function *TextSubtext (const char *text , int position , int length )
+end function
+function *TextReplace (char *text , const char *replace , const char *by )
+end function
+function *TextInsert (const char *text , const char *insert , int position )
+end function
+function *TextJoin (const char **textList , int count , const char *delimiter )
+end function
+function **TextSplit (const char *text , char delimiter , int *count )
+end function
+sub TextAppend (char *text , const char *append , int *position )
+end sub
+function TextFindIndex (const char *text , const char *find )
+end function
+function *TextToUpper (const char *text )
+end function
+function *TextToLower (const char *text )
+end function
+function *TextToPascal (const char *text )
+end function
+function TextToInteger (const char *text )
+end function
+sub DrawLine3D (Vector3 startPos , Vector3 endPos , Color color )
+end sub
+sub DrawPoint3D (Vector3 position , Color color )
+end sub
+sub DrawCircle3D (Vector3 center , float radius , Vector3 rotationAxis , float rotationAngle , Color color )
+end sub
+sub DrawTriangle3D (Vector3 v1 , Vector3 v2 , Vector3 v3 , Color color )
+end sub
+sub DrawTriangleStrip3D (Vector3 *points , int pointCount , Color color )
+end sub
+sub DrawCube (Vector3 position , float width , float height , float length , Color color )
+end sub
+sub DrawCubeV (Vector3 position , Vector3 size , Color color )
+end sub
+sub DrawCubeWires (Vector3 position , float width , float height , float length , Color color )
+end sub
+sub DrawCubeWiresV (Vector3 position , Vector3 size , Color color )
+end sub
+sub DrawSphere (Vector3 centerPos , float radius , Color color )
+end sub
+sub DrawSphereEx (Vector3 centerPos , float radius , int rings , int slices , Color color )
+end sub
+sub DrawSphereWires (Vector3 centerPos , float radius , int rings , int slices , Color color )
+end sub
+sub DrawCylinder (Vector3 position , float radiusTop , float radiusBottom , float height , int slices , Color color )
+end sub
+sub DrawCylinderEx (Vector3 startPos , Vector3 endPos , float startRadius , float endRadius , int sides , Color color )
+end sub
+sub DrawCylinderWires (Vector3 position , float radiusTop , float radiusBottom , float height , int slices , Color color )
+end sub
+sub DrawCylinderWiresEx (Vector3 startPos , Vector3 endPos , float startRadius , float endRadius , int sides , Color color )
+end sub
+sub DrawCapsule (Vector3 startPos , Vector3 endPos , float radius , int slices , int rings , Color color )
+end sub
+sub DrawCapsuleWires (Vector3 startPos , Vector3 endPos , float radius , int slices , int rings , Color color )
+end sub
+sub DrawPlane (Vector3 centerPos , Vector2 size , Color color )
+end sub
+sub DrawRay (Ray ray , Color color )
+end sub
+sub DrawGrid (int slices , float spacing )
+end sub
+function LoadModel (const char *fileName )
+end function
+function LoadModelFromMesh (Mesh mesh )
+end function
+function IsModelReady (Model model )
+end function
+sub UnloadModel (Model model )
+end sub
+function GetModelBoundingBox (Model model )
+end function
+sub DrawModel (Model model , Vector3 position , float scale , Color tint )
+end sub
+sub DrawModelEx (Model model , Vector3 position , Vector3 rotationAxis , float rotationAngle , Vector3 scale , Color tint )
+end sub
+sub DrawModelWires (Model model , Vector3 position , float scale , Color tint )
+end sub
+sub DrawModelWiresEx (Model model , Vector3 position , Vector3 rotationAxis , float rotationAngle , Vector3 scale , Color tint )
+end sub
+sub DrawBoundingBox (BoundingBox box , Color color )
+end sub
+sub DrawBillboard (Camera camera , Texture2D texture , Vector3 position , float size , Color tint )
+end sub
+sub DrawBillboardRec (Camera camera , Texture2D texture , Rectangle source , Vector3 position , Vector2 size , Color tint )
+end sub
+sub DrawBillboardPro (Camera camera , Texture2D texture , Rectangle source , Vector3 position , Vector3 up , Vector2 size , Vector2 origin , float rotation , Color tint )
+end sub
+sub UploadMesh (Mesh *mesh , bool dynamic )
+end sub
+sub UpdateMeshBuffer (Mesh mesh , int index , const void *data , int dataSize , int offset )
+end sub
+sub UnloadMesh (Mesh mesh )
+end sub
+sub DrawMesh (Mesh mesh , Material material , Matrix transform )
+end sub
+sub DrawMeshInstanced (Mesh mesh , Material material , const Matrix *transforms , int instances )
+end sub
+function ExportMesh (Mesh mesh , const char *fileName )
+end function
+function GetMeshBoundingBox (Mesh mesh )
+end function
+sub GenMeshTangents (Mesh *mesh )
+end sub
+function GenMeshPoly (int sides , float radius )
+end function
+function GenMeshPlane (float width , float length , int resX , int resZ )
+end function
+function GenMeshCube (float width , float height , float length )
+end function
+function GenMeshSphere (float radius , int rings , int slices )
+end function
+function GenMeshHemiSphere (float radius , int rings , int slices )
+end function
+function GenMeshCylinder (float radius , float height , int slices )
+end function
+function GenMeshCone (float radius , float height , int slices )
+end function
+function GenMeshTorus (float radius , float size , int radSeg , int sides )
+end function
+function GenMeshKnot (float radius , float size , int radSeg , int sides )
+end function
+function GenMeshHeightmap (Image heightmap , Vector3 size )
+end function
+function GenMeshCubicmap (Image cubicmap , Vector3 cubeSize )
+end function
+function *LoadMaterials (const char *fileName , int *materialCount )
+end function
+function LoadMaterialDefault (void )
+end function
+function IsMaterialReady (Material material )
+end function
+sub UnloadMaterial (Material material )
+end sub
+sub SetMaterialTexture (Material *material , int mapType , Texture2D texture )
+end sub
+sub SetModelMeshMaterial (Model *model , int meshId , int materialId )
+end sub
+function *LoadModelAnimations (const char *fileName , unsigned int *animCount )
+end function
+sub UpdateModelAnimation (Model model , ModelAnimation anim , int frame )
+end sub
+sub UnloadModelAnimation (ModelAnimation anim )
+end sub
+sub UnloadModelAnimations (ModelAnimation *animations , unsigned int count )
+end sub
+function IsModelAnimationValid (Model model , ModelAnimation anim )
+end function
+function CheckCollisionSpheres (Vector3 center1 , float radius1 , Vector3 center2 , float radius2 )
+end function
+function CheckCollisionBoxes (BoundingBox box1 , BoundingBox box2 )
+end function
+function CheckCollisionBoxSphere (BoundingBox box , Vector3 center , float radius )
+end function
+function GetRayCollisionSphere (Ray ray , Vector3 center , float radius )
+end function
+function GetRayCollisionBox (Ray ray , BoundingBox box )
+end function
+function GetRayCollisionMesh (Ray ray , Mesh mesh , Matrix transform )
+end function
+function GetRayCollisionTriangle (Ray ray , Vector3 p1 , Vector3 p2 , Vector3 p3 )
+end function
+function GetRayCollisionQuad (Ray ray , Vector3 p1 , Vector3 p2 , Vector3 p3 , Vector3 p4 )
+end function
+sub InitAudioDevice (void )
+end sub
+sub CloseAudioDevice (void )
+end sub
+function IsAudioDeviceReady (void )
+end function
+sub SetMasterVolume (float volume )
+end sub
+function LoadWave (const char *fileName )
+end function
+function LoadWaveFromMemory (const char *fileType , const unsigned char *fileData , int dataSize )
+end function
+function IsWaveReady (Wave wave )
+end function
+function LoadSound (const char *fileName )
+end function
+function LoadSoundFromWave (Wave wave )
+end function
+function IsSoundReady (Sound sound )
+end function
+sub UpdateSound (Sound sound , const void *data , int sampleCount )
+end sub
+sub UnloadWave (Wave wave )
+end sub
+sub UnloadSound (Sound sound )
+end sub
+function ExportWave (Wave wave , const char *fileName )
+end function
+function ExportWaveAsCode (Wave wave , const char *fileName )
+end function
+sub PlaySound (Sound sound )
+end sub
+sub StopSound (Sound sound )
+end sub
+sub PauseSound (Sound sound )
+end sub
+sub ResumeSound (Sound sound )
+end sub
+function IsSoundPlaying (Sound sound )
+end function
+sub SetSoundVolume (Sound sound , float volume )
+end sub
+sub SetSoundPitch (Sound sound , float pitch )
+end sub
+sub SetSoundPan (Sound sound , float pan )
+end sub
+function WaveCopy (Wave wave )
+end function
+sub WaveCrop (Wave *wave , int initSample , int finalSample )
+end sub
+sub WaveFormat (Wave *wave , int sampleRate , int sampleSize , int channels )
+end sub
+function *LoadWaveSamples (Wave wave )
+end function
+sub UnloadWaveSamples (float *samples )
+end sub
+function LoadMusicStream (const char *fileName )
+end function
+function LoadMusicStreamFromMemory (const char *fileType , const unsigned char *data , int dataSize )
+end function
+function IsMusicReady (Music music )
+end function
+sub UnloadMusicStream (Music music )
+end sub
+sub PlayMusicStream (Music music )
+end sub
+function IsMusicStreamPlaying (Music music )
+end function
+sub UpdateMusicStream (Music music )
+end sub
+sub StopMusicStream (Music music )
+end sub
+sub PauseMusicStream (Music music )
+end sub
+sub ResumeMusicStream (Music music )
+end sub
+sub SeekMusicStream (Music music , float position )
+end sub
+sub SetMusicVolume (Music music , float volume )
+end sub
+sub SetMusicPitch (Music music , float pitch )
+end sub
+sub SetMusicPan (Music music , float pan )
+end sub
+function GetMusicTimeLength (Music music )
+end function
+function GetMusicTimePlayed (Music music )
+end function
+function LoadAudioStream (unsigned int sampleRate , unsigned int sampleSize , unsigned int channels )
+end function
+function IsAudioStreamReady (AudioStream stream )
+end function
+sub UnloadAudioStream (AudioStream stream )
+end sub
+sub UpdateAudioStream (AudioStream stream , const void *data , int frameCount )
+end sub
+function IsAudioStreamProcessed (AudioStream stream )
+end function
+sub PlayAudioStream (AudioStream stream )
+end sub
+sub PauseAudioStream (AudioStream stream )
+end sub
+sub ResumeAudioStream (AudioStream stream )
+end sub
+function IsAudioStreamPlaying (AudioStream stream )
+end function
+sub StopAudioStream (AudioStream stream )
+end sub
+sub SetAudioStreamVolume (AudioStream stream , float volume )
+end sub
+sub SetAudioStreamPitch (AudioStream stream , float pitch )
+end sub
+sub SetAudioStreamPan (AudioStream stream , float pan )
+end sub
+sub SetAudioStreamBufferSizeDefault (int size )
+end sub
+sub SetAudioStreamCallback (AudioStream stream , AudioCallback callback )
+end sub
+sub AttachAudioStreamProcessor (AudioStream stream , AudioCallback processor )
+end sub
+sub DetachAudioStreamProcessor (AudioStream stream , AudioCallback processor )
+end sub
+sub AttachAudioMixedProcessor (AudioCallback processor )
+end sub
+sub DetachAudioMixedProcessor (AudioCallback processor )
+end sub

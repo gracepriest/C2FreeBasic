@@ -1,0 +1,370 @@
+sub InitWindow (int width, int height, const)
+end sub
+function WindowShouldClose (void)
+end function
+sub CloseWindow (void)
+end sub
+function IsWindowReady (void)
+end function
+function IsWindowFullscreen (void)
+end function
+function IsWindowHidden (void)
+end function
+function IsWindowMinimized (void)
+end function
+function IsWindowMaximized (void)
+end function
+function IsWindowFocused (void)
+end function
+function IsWindowResized (void)
+end function
+function IsWindowState (unsigned)
+end function
+sub SetWindowState (unsigned)
+end sub
+sub ClearWindowState (unsigned)
+end sub
+sub ToggleFullscreen (void)
+end sub
+sub MaximizeWindow (void)
+end sub
+sub MinimizeWindow (void)
+end sub
+sub RestoreWindow (void)
+end sub
+sub SetWindowIcon (Image)
+end sub
+sub SetWindowIcons (Image *images, int)
+end sub
+sub SetWindowTitle (const)
+end sub
+sub SetWindowPosition (int x, int)
+end sub
+sub SetWindowMonitor (int)
+end sub
+sub SetWindowMinSize (int width, int)
+end sub
+sub SetWindowSize (int width, int)
+end sub
+sub SetWindowOpacity (float)
+end sub
+sub *GetWindowHandle (void)
+end sub
+function GetScreenWidth (void)
+end function
+function GetScreenHeight (void)
+end function
+function GetRenderWidth (void)
+end function
+function GetRenderHeight (void)
+end function
+function GetMonitorCount (void)
+end function
+function GetCurrentMonitor (void)
+end function
+function GetMonitorPosition (int)
+end function
+function GetMonitorWidth (int)
+end function
+function GetMonitorHeight (int)
+end function
+function GetMonitorPhysicalWidth (int)
+end function
+function GetMonitorPhysicalHeight (int)
+end function
+function GetMonitorRefreshRate (int)
+end function
+function GetWindowPosition (void)
+end function
+function GetWindowScaleDPI (void)
+end function
+function *GetMonitorName (int)
+end function
+sub SetClipboardText (const)
+end sub
+function *GetClipboardText (void)
+end function
+sub EnableEventWaiting (void)
+end sub
+sub DisableEventWaiting (void)
+end sub
+sub SwapScreenBuffer (void)
+end sub
+sub PollInputEvents (void)
+end sub
+sub WaitTime (double)
+end sub
+sub ShowCursor (void)
+end sub
+sub HideCursor (void)
+end sub
+function IsCursorHidden (void)
+end function
+sub EnableCursor (void)
+end sub
+sub DisableCursor (void)
+end sub
+function IsCursorOnScreen (void)
+end function
+sub ClearBackground (Color)
+end sub
+sub BeginDrawing (void)
+end sub
+sub EndDrawing (void)
+end sub
+sub BeginMode2D (Camera2D)
+end sub
+sub EndMode2D (void)
+end sub
+sub BeginMode3D (Camera3D)
+end sub
+sub EndMode3D (void)
+end sub
+sub BeginTextureMode (RenderTexture2D)
+end sub
+sub EndTextureMode (void)
+end sub
+sub BeginShaderMode (Shader)
+end sub
+sub EndShaderMode (void)
+end sub
+sub BeginBlendMode (int)
+end sub
+sub EndBlendMode (void)
+end sub
+sub BeginScissorMode (int x, int y, int width, int)
+end sub
+sub EndScissorMode (void)
+end sub
+sub BeginVrStereoMode (VrStereoConfig)
+end sub
+sub EndVrStereoMode (void)
+end sub
+function LoadVrStereoConfig (VrDeviceInfo)
+end function
+sub UnloadVrStereoConfig (VrStereoConfig)
+end sub
+function LoadShader (const *vsFileName, const)
+end function
+function LoadShaderFromMemory (const *vsCode, const)
+end function
+function IsShaderReady (Shader)
+end function
+function GetShaderLocation (Shader shader, const)
+end function
+function GetShaderLocationAttrib (Shader shader, const)
+end function
+sub SetShaderValue (Shader shader, int locIndex, const *value, int)
+end sub
+sub SetShaderValueV (Shader shader, int locIndex, const *value, int uniformType, int)
+end sub
+sub SetShaderValueMatrix (Shader shader, int locIndex, Matrix)
+end sub
+sub SetShaderValueTexture (Shader shader, int locIndex, Texture2D)
+end sub
+sub UnloadShader (Shader)
+end sub
+function GetMouseRay (Vector2 mousePosition, Camera)
+end function
+function GetCameraMatrix (Camera)
+end function
+function GetCameraMatrix2D (Camera2D)
+end function
+function GetWorldToScreen (Vector3 position, Camera)
+end function
+function GetScreenToWorld2D (Vector2 position, Camera2D)
+end function
+function GetWorldToScreenEx (Vector3 position, Camera camera, int width, int)
+end function
+function GetWorldToScreen2D (Vector2 position, Camera2D)
+end function
+sub SetTargetFPS (int)
+end sub
+function GetFPS (void)
+end function
+function GetFrameTime (void)
+end function
+function GetTime (void)
+end function
+function GetRandomValue (int min, int)
+end function
+sub SetRandomSeed (unsigned)
+end sub
+sub TakeScreenshot (const)
+end sub
+sub TraceLog (int logLevel, const)
+end sub
+sub SetTraceLogLevel (int)
+end sub
+sub *MemAlloc (unsigned)
+end sub
+sub *MemRealloc (void *ptr, unsigned)
+end sub
+sub MemFree (void)
+end sub
+sub OpenURL (const)
+end sub
+sub SetTraceLogCallback (TraceLogCallback)
+end sub
+sub SetLoadFileDataCallback (LoadFileDataCallback)
+end sub
+sub SetSaveFileDataCallback (SaveFileDataCallback)
+end sub
+sub SetLoadFileTextCallback (LoadFileTextCallback)
+end sub
+sub SetSaveFileTextCallback (SaveFileTextCallback)
+end sub
+function *LoadFileData (const *fileName, unsigned)
+end function
+sub UnloadFileData (unsigned)
+end sub
+function SaveFileData (const *fileName, void *data, unsigned)
+end function
+function ExportDataAsCode (const *data, unsigned size, const)
+end function
+function *LoadFileText (const)
+end function
+sub UnloadFileText (char)
+end sub
+function SaveFileText (const *fileName, char)
+end function
+function FileExists (const)
+end function
+function DirectoryExists (const)
+end function
+function IsFileExtension (const *fileName, const)
+end function
+function GetFileLength (const)
+end function
+function *GetFileExtension (const)
+end function
+function *GetFileName (const)
+end function
+function *GetFileNameWithoutExt (const)
+end function
+function *GetDirectoryPath (const)
+end function
+function *GetPrevDirectoryPath (const)
+end function
+function *GetWorkingDirectory (void)
+end function
+function *GetApplicationDirectory (void)
+end function
+function ChangeDirectory (const)
+end function
+function IsPathFile (const)
+end function
+function LoadDirectoryFiles (const)
+end function
+function LoadDirectoryFilesEx (const *basePath, const *filter, bool)
+end function
+sub UnloadDirectoryFiles (FilePathList)
+end sub
+function IsFileDropped (void)
+end function
+function LoadDroppedFiles (void)
+end function
+sub UnloadDroppedFiles (FilePathList)
+end sub
+function GetFileModTime (const)
+end function
+function *CompressData (const *data, int dataSize, int)
+end function
+function *DecompressData (const *compData, int compDataSize, int)
+end function
+function *EncodeDataBase64 (const *data, int dataSize, int)
+end function
+function *DecodeDataBase64 (const *data, int)
+end function
+function IsKeyPressed (int)
+end function
+function IsKeyDown (int)
+end function
+function IsKeyReleased (int)
+end function
+function IsKeyUp (int)
+end function
+sub SetExitKey (int)
+end sub
+function GetKeyPressed (void)
+end function
+function GetCharPressed (void)
+end function
+function IsGamepadAvailable (int)
+end function
+function *GetGamepadName (int)
+end function
+function IsGamepadButtonPressed (int gamepad, int)
+end function
+function IsGamepadButtonDown (int gamepad, int)
+end function
+function IsGamepadButtonReleased (int gamepad, int)
+end function
+function IsGamepadButtonUp (int gamepad, int)
+end function
+function GetGamepadButtonPressed (void)
+end function
+function GetGamepadAxisCount (int)
+end function
+function GetGamepadAxisMovement (int gamepad, int)
+end function
+function SetGamepadMappings (const)
+end function
+function IsMouseButtonPressed (int)
+end function
+function IsMouseButtonDown (int)
+end function
+function IsMouseButtonReleased (int)
+end function
+function IsMouseButtonUp (int)
+end function
+function GetMouseX (void)
+end function
+function GetMouseY (void)
+end function
+function GetMousePosition (void)
+end function
+function GetMouseDelta (void)
+end function
+sub SetMousePosition (int x, int)
+end sub
+sub SetMouseOffset (int offsetX, int)
+end sub
+sub SetMouseScale (float scaleX, float)
+end sub
+function GetMouseWheelMove (void)
+end function
+function GetMouseWheelMoveV (void)
+end function
+sub SetMouseCursor (int)
+end sub
+function GetTouchX (void)
+end function
+function GetTouchY (void)
+end function
+function GetTouchPosition (int)
+end function
+function GetTouchPointId (int)
+end function
+function GetTouchPointCount (void)
+end function
+sub SetGesturesEnabled (unsigned)
+end sub
+function IsGestureDetected (int)
+end function
+function GetGestureDetected (void)
+end function
+function GetGestureHoldDuration (void)
+end function
+function GetGestureDragVector (void)
+end function
+function GetGestureDragAngle (void)
+end function
+function GetGesturePinchVector (void)
+end function
+function GetGesturePinchAngle (void)
+end function
+sub UpdateCamera (Camera *camera, int)
+end sub
+sub UpdateCameraPro (Camera *camera, Vector3 movement, Vector3 rotation, float)
+end sub

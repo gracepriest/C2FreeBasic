@@ -1,0 +1,440 @@
+function LoadImage (const)
+end function
+function LoadImageRaw (const *fileName, int width, int height, int format, int)
+end function
+function LoadImageAnim (const *fileName, int)
+end function
+function LoadImageFromMemory (const *fileType, const *fileData, int)
+end function
+function LoadImageFromTexture (Texture2D)
+end function
+function LoadImageFromScreen (void)
+end function
+function IsImageReady (Image)
+end function
+sub UnloadImage (Image)
+end sub
+function ExportImage (Image image, const)
+end function
+function ExportImageAsCode (Image image, const)
+end function
+function GenImageColor (int width, int height, Color)
+end function
+function GenImageGradientV (int width, int height, Color top, Color)
+end function
+function GenImageGradientH (int width, int height, Color left, Color)
+end function
+function GenImageGradientRadial (int width, int height, float density, Color inner, Color)
+end function
+function GenImageChecked (int width, int height, int checksX, int checksY, Color col1, Color)
+end function
+function GenImageWhiteNoise (int width, int height, float)
+end function
+function GenImagePerlinNoise (int width, int height, int offsetX, int offsetY, float)
+end function
+function GenImageCellular (int width, int height, int)
+end function
+function GenImageText (int width, int height, const)
+end function
+function ImageCopy (Image)
+end function
+function ImageFromImage (Image image, Rectangle)
+end function
+function ImageText (const *text, int fontSize, Color)
+end function
+function ImageTextEx (Font font, const *text, float fontSize, float spacing, Color)
+end function
+sub ImageFormat (Image *image, int)
+end sub
+sub ImageToPOT (Image *image, Color)
+end sub
+sub ImageCrop (Image *image, Rectangle)
+end sub
+sub ImageAlphaCrop (Image *image, float)
+end sub
+sub ImageAlphaClear (Image *image, Color color, float)
+end sub
+sub ImageAlphaMask (Image *image, Image)
+end sub
+sub ImageAlphaPremultiply (Image)
+end sub
+sub ImageBlurGaussian (Image *image, int)
+end sub
+sub ImageResize (Image *image, int newWidth, int)
+end sub
+sub ImageResizeNN (Image *image, int newWidth, int)
+end sub
+sub ImageResizeCanvas (Image *image, int newWidth, int newHeight, int offsetX, int offsetY, Color)
+end sub
+sub ImageMipmaps (Image)
+end sub
+sub ImageDither (Image *image, int rBpp, int gBpp, int bBpp, int)
+end sub
+sub ImageFlipVertical (Image)
+end sub
+sub ImageFlipHorizontal (Image)
+end sub
+sub ImageRotateCW (Image)
+end sub
+sub ImageRotateCCW (Image)
+end sub
+sub ImageColorTint (Image *image, Color)
+end sub
+sub ImageColorInvert (Image)
+end sub
+sub ImageColorGrayscale (Image)
+end sub
+sub ImageColorContrast (Image *image, float)
+end sub
+sub ImageColorBrightness (Image *image, int)
+end sub
+sub ImageColorReplace (Image *image, Color color, Color)
+end sub
+function *LoadImageColors (Image)
+end function
+function *LoadImagePalette (Image image, int maxPaletteSize, int)
+end function
+sub UnloadImageColors (Color)
+end sub
+sub UnloadImagePalette (Color)
+end sub
+function GetImageAlphaBorder (Image image, float)
+end function
+function GetImageColor (Image image, int x, int)
+end function
+sub ImageClearBackground (Image *dst, Color)
+end sub
+sub ImageDrawPixel (Image *dst, int posX, int posY, Color)
+end sub
+sub ImageDrawPixelV (Image *dst, Vector2 position, Color)
+end sub
+sub ImageDrawLine (Image *dst, int startPosX, int startPosY, int endPosX, int endPosY, Color)
+end sub
+sub ImageDrawLineV (Image *dst, Vector2 start, Vector2 end, Color)
+end sub
+sub ImageDrawCircle (Image *dst, int centerX, int centerY, int radius, Color)
+end sub
+sub ImageDrawCircleV (Image *dst, Vector2 center, int radius, Color)
+end sub
+sub ImageDrawCircleLines (Image *dst, int centerX, int centerY, int radius, Color)
+end sub
+sub ImageDrawCircleLinesV (Image *dst, Vector2 center, int radius, Color)
+end sub
+sub ImageDrawRectangle (Image *dst, int posX, int posY, int width, int height, Color)
+end sub
+sub ImageDrawRectangleV (Image *dst, Vector2 position, Vector2 size, Color)
+end sub
+sub ImageDrawRectangleRec (Image *dst, Rectangle rec, Color)
+end sub
+sub ImageDrawRectangleLines (Image *dst, Rectangle rec, int thick, Color)
+end sub
+sub ImageDraw (Image *dst, Image src, Rectangle srcRec, Rectangle dstRec, Color)
+end sub
+sub ImageDrawText (Image *dst, const *text, int posX, int posY, int fontSize, Color)
+end sub
+sub ImageDrawTextEx (Image *dst, Font font, const *text, Vector2 position, float fontSize, float spacing, Color)
+end sub
+function LoadTexture (const)
+end function
+function LoadTextureFromImage (Image)
+end function
+function LoadTextureCubemap (Image image, int)
+end function
+function LoadRenderTexture (int width, int)
+end function
+function IsTextureReady (Texture2D)
+end function
+sub UnloadTexture (Texture2D)
+end sub
+function IsRenderTextureReady (RenderTexture2D)
+end function
+sub UnloadRenderTexture (RenderTexture2D)
+end sub
+sub UpdateTexture (Texture2D texture, const)
+end sub
+sub UpdateTextureRec (Texture2D texture, Rectangle rec, const)
+end sub
+sub GenTextureMipmaps (Texture2D)
+end sub
+sub SetTextureFilter (Texture2D texture, int)
+end sub
+sub SetTextureWrap (Texture2D texture, int)
+end sub
+sub DrawTexture (Texture2D texture, int posX, int posY, Color)
+end sub
+sub DrawTextureV (Texture2D texture, Vector2 position, Color)
+end sub
+sub DrawTextureEx (Texture2D texture, Vector2 position, float rotation, float scale, Color)
+end sub
+sub DrawTextureRec (Texture2D texture, Rectangle source, Vector2 position, Color)
+end sub
+sub DrawTexturePro (Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color)
+end sub
+sub DrawTextureNPatch (Texture2D texture, NPatchInfo nPatchInfo, Rectangle dest, Vector2 origin, float rotation, Color)
+end sub
+function Fade (Color color, float)
+end function
+function ColorToInt (Color)
+end function
+function ColorNormalize (Color)
+end function
+function ColorFromNormalized (Vector4)
+end function
+function ColorToHSV (Color)
+end function
+function ColorFromHSV (float hue, float saturation, float)
+end function
+function ColorTint (Color color, Color)
+end function
+function ColorBrightness (Color color, float)
+end function
+function ColorContrast (Color color, float)
+end function
+function ColorAlpha (Color color, float)
+end function
+function ColorAlphaBlend (Color dst, Color src, Color)
+end function
+function GetColor (unsigned)
+end function
+function GetPixelColor (void *srcPtr, int)
+end function
+sub SetPixelColor (void *dstPtr, Color color, int)
+end sub
+function GetPixelDataSize (int width, int height, int)
+end function
+function GetFontDefault (void)
+end function
+function LoadFont (const)
+end function
+function LoadFontEx (const *fileName, int fontSize, int *fontChars, int)
+end function
+function LoadFontFromImage (Image image, Color key, int)
+end function
+function LoadFontFromMemory (const *fileType, const *fileData, int dataSize, int fontSize, int *fontChars, int)
+end function
+function IsFontReady (Font)
+end function
+function *LoadFontData (const *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, int)
+end function
+function GenImageFontAtlas (const *chars, Rectangle **recs, int glyphCount, int fontSize, int padding, int)
+end function
+sub UnloadFontData (GlyphInfo *chars, int)
+end sub
+sub UnloadFont (Font)
+end sub
+function ExportFontAsCode (Font font, const)
+end function
+sub DrawFPS (int posX, int)
+end sub
+sub DrawText (const *text, int posX, int posY, int fontSize, Color)
+end sub
+sub DrawTextEx (Font font, const *text, Vector2 position, float fontSize, float spacing, Color)
+end sub
+sub DrawTextPro (Font font, const *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color)
+end sub
+sub DrawTextCodepoint (Font font, int codepoint, Vector2 position, float fontSize, Color)
+end sub
+sub DrawTextCodepoints (Font font, const *codepoints, int count, Vector2 position, float fontSize, float spacing, Color)
+end sub
+function MeasureText (const *text, int)
+end function
+function MeasureTextEx (Font font, const *text, float fontSize, float)
+end function
+function GetGlyphIndex (Font font, int)
+end function
+function GetGlyphInfo (Font font, int)
+end function
+function GetGlyphAtlasRec (Font font, int)
+end function
+function *LoadUTF8 (const *codepoints, int)
+end function
+sub UnloadUTF8 (char)
+end sub
+function *LoadCodepoints (const *text, int)
+end function
+sub UnloadCodepoints (int)
+end sub
+function GetCodepointCount (const)
+end function
+function GetCodepoint (const *text, int)
+end function
+function GetCodepointNext (const *text, int)
+end function
+function GetCodepointPrevious (const *text, int)
+end function
+function *CodepointToUTF8 (int codepoint, int)
+end function
+function TextCopy (char *dst, const)
+end function
+function TextIsEqual (const *text1, const)
+end function
+function TextLength (const)
+end function
+function *TextFormat (const)
+end function
+function *TextSubtext (const *text, int position, int)
+end function
+function *TextReplace (char *text, const *replace, const)
+end function
+function *TextInsert (const *text, const *insert, int)
+end function
+function *TextJoin (const **textList, int count, const)
+end function
+function **TextSplit (const *text, char delimiter, int)
+end function
+sub TextAppend (char *text, const *append, int)
+end sub
+function TextFindIndex (const *text, const)
+end function
+function *TextToUpper (const)
+end function
+function *TextToLower (const)
+end function
+function *TextToPascal (const)
+end function
+function TextToInteger (const)
+end function
+sub DrawLine3D (Vector3 startPos, Vector3 endPos, Color)
+end sub
+sub DrawPoint3D (Vector3 position, Color)
+end sub
+sub DrawCircle3D (Vector3 center, float radius, Vector3 rotationAxis, float rotationAngle, Color)
+end sub
+sub DrawTriangle3D (Vector3 v1, Vector3 v2, Vector3 v3, Color)
+end sub
+sub DrawTriangleStrip3D (Vector3 *points, int pointCount, Color)
+end sub
+sub DrawCube (Vector3 position, float width, float height, float length, Color)
+end sub
+sub DrawCubeV (Vector3 position, Vector3 size, Color)
+end sub
+sub DrawCubeWires (Vector3 position, float width, float height, float length, Color)
+end sub
+sub DrawCubeWiresV (Vector3 position, Vector3 size, Color)
+end sub
+sub DrawSphere (Vector3 centerPos, float radius, Color)
+end sub
+sub DrawSphereEx (Vector3 centerPos, float radius, int rings, int slices, Color)
+end sub
+sub DrawSphereWires (Vector3 centerPos, float radius, int rings, int slices, Color)
+end sub
+sub DrawCylinder (Vector3 position, float radiusTop, float radiusBottom, float height, int slices, Color)
+end sub
+sub DrawCylinderEx (Vector3 startPos, Vector3 endPos, float startRadius, float endRadius, int sides, Color)
+end sub
+sub DrawCylinderWires (Vector3 position, float radiusTop, float radiusBottom, float height, int slices, Color)
+end sub
+sub DrawCylinderWiresEx (Vector3 startPos, Vector3 endPos, float startRadius, float endRadius, int sides, Color)
+end sub
+sub DrawCapsule (Vector3 startPos, Vector3 endPos, float radius, int slices, int rings, Color)
+end sub
+sub DrawCapsuleWires (Vector3 startPos, Vector3 endPos, float radius, int slices, int rings, Color)
+end sub
+sub DrawPlane (Vector3 centerPos, Vector2 size, Color)
+end sub
+sub DrawRay (Ray ray, Color)
+end sub
+sub DrawGrid (int slices, float)
+end sub
+function LoadModel (const)
+end function
+function LoadModelFromMesh (Mesh)
+end function
+function IsModelReady (Model)
+end function
+sub UnloadModel (Model)
+end sub
+function GetModelBoundingBox (Model)
+end function
+sub DrawModel (Model model, Vector3 position, float scale, Color)
+end sub
+sub DrawModelEx (Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color)
+end sub
+sub DrawModelWires (Model model, Vector3 position, float scale, Color)
+end sub
+sub DrawModelWiresEx (Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color)
+end sub
+sub DrawBoundingBox (BoundingBox box, Color)
+end sub
+sub DrawBillboard (Camera camera, Texture2D texture, Vector3 position, float size, Color)
+end sub
+sub DrawBillboardRec (Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector2 size, Color)
+end sub
+sub DrawBillboardPro (Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, float rotation, Color)
+end sub
+sub UploadMesh (Mesh *mesh, bool)
+end sub
+sub UpdateMeshBuffer (Mesh mesh, int index, const *data, int dataSize, int)
+end sub
+sub UnloadMesh (Mesh)
+end sub
+sub DrawMesh (Mesh mesh, Material material, Matrix)
+end sub
+sub DrawMeshInstanced (Mesh mesh, Material material, const *transforms, int)
+end sub
+function ExportMesh (Mesh mesh, const)
+end function
+function GetMeshBoundingBox (Mesh)
+end function
+sub GenMeshTangents (Mesh)
+end sub
+function GenMeshPoly (int sides, float)
+end function
+function GenMeshPlane (float width, float length, int resX, int)
+end function
+function GenMeshCube (float width, float height, float)
+end function
+function GenMeshSphere (float radius, int rings, int)
+end function
+function GenMeshHemiSphere (float radius, int rings, int)
+end function
+function GenMeshCylinder (float radius, float height, int)
+end function
+function GenMeshCone (float radius, float height, int)
+end function
+function GenMeshTorus (float radius, float size, int radSeg, int)
+end function
+function GenMeshKnot (float radius, float size, int radSeg, int)
+end function
+function GenMeshHeightmap (Image heightmap, Vector3)
+end function
+function GenMeshCubicmap (Image cubicmap, Vector3)
+end function
+function *LoadMaterials (const *fileName, int)
+end function
+function LoadMaterialDefault (void)
+end function
+function IsMaterialReady (Material)
+end function
+sub UnloadMaterial (Material)
+end sub
+sub SetMaterialTexture (Material *material, int mapType, Texture2D)
+end sub
+sub SetModelMeshMaterial (Model *model, int meshId, int)
+end sub
+function *LoadModelAnimations (const *fileName, unsigned)
+end function
+sub UpdateModelAnimation (Model model, ModelAnimation anim, int)
+end sub
+sub UnloadModelAnimation (ModelAnimation)
+end sub
+sub UnloadModelAnimations (ModelAnimation *animations, unsigned)
+end sub
+function IsModelAnimationValid (Model model, ModelAnimation)
+end function
+function CheckCollisionSpheres (Vector3 center1, float radius1, Vector3 center2, float)
+end function
+function CheckCollisionBoxes (BoundingBox box1, BoundingBox)
+end function
+function CheckCollisionBoxSphere (BoundingBox box, Vector3 center, float)
+end function
+function GetRayCollisionSphere (Ray ray, Vector3 center, float)
+end function
+function GetRayCollisionBox (Ray ray, BoundingBox)
+end function
+function GetRayCollisionMesh (Ray ray, Mesh mesh, Matrix)
+end function
+function GetRayCollisionTriangle (Ray ray, Vector3 p1, Vector3 p2, Vector3)
+end function
+function GetRayCollisionQuad (Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3)
+end function
